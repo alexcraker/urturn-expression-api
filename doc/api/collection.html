@@ -1,8 +1,8 @@
 <h1>UT.Collection</h1>
 <h2>Introduction</h2>
-<p><strong>UT.Collection</strong> instances conform to the HTML5 storage API and let you store and retrieve data in your expression. The goal of this storage object is to provide persistance for a post instance.</p>
-<p>You can use it in a way simillar to <a href='http://diveintohtml5.info/storage.html'>HTML5 local storage API</a>.</p>
-<p><tt>post.storage</tt> is the instance you will most likely interact with, here is a simple example:</p>
+<p><strong>UT.Collection</strong> instances conform to the HTML5 storage API and let you store and retrieve data in your Expression. The goal of this storage object is to provide persistance for a post instance.</p>
+<p>You can use it in a way similar to <a href='http://diveintohtml5.info/storage.html'>HTML5 local storage API</a>.</p>
+<p><tt>post.storage</tt> is the instance you will most likely interact with. Here is a simple example:</p>
 
 <pre class="prettyprint"><code class="lang-html"
   >// editor.html
@@ -20,7 +20,7 @@
     post.storage.score = 2.13;
     post.storage.parameters = {ratio: 0.92, layout: 2, color: '#443F22'};
 
-    // Save the data server side (from your side, it is synchronous call as we provide latency compensation).
+    // Save the data server side (from your side, it is a synchronous call as we provide latency compensation).
     post.save();
   });
 &lt;/script>
@@ -37,7 +37,7 @@
 &lt;/script>
 </code></pre>
 
-<p>If you don't like magic, you can use instead the setter `setItem(key, val)` and the getter `getItem(key, [default_val])` to manage the store.</p>
+<p>If you don't like magic, you can use the setter `setItem(key, val)` and the getter `getItem(key, [default_val])` to manage the store instead.</p>
 <h2>.getItem(key, [defaultValue])</h2>
 <div class="well">
   <h4>Parameters</h4>
@@ -50,7 +50,7 @@
   	<b>[any]</b> : The value associated with the key or defaultValue if no value is associated with key
   </p>
   <h4>Usage</h4>
-  <p>The <b>getItem</b> method will let you retrieve some data previously setted.</p>
+  <p>The <b>getItem</b> method will let you retrieve some data previously set.</p>
   <pre class="prettyprint"><code class="lang-javascript">
     UT.Expression.ready( function( expression ) 
     {
@@ -73,7 +73,7 @@
   </p>
   <h4>Usage</h4>
   <p>The <b>setItem</b> method will let you save a ressource so you 
-    can retrieve it latter (for exemple : when a post is shown to an user).
+    can retrieve it later (for example: when a post is shown to a user).
     Note that you can retrieve it later.
   </p>
   <pre class="prettyprint"><code class="lang-javascript">
